@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+  <div class="container">
+    <h1 class="mb-4 gradient-text">CV Templates</h1>
+    <p class="lead mb-5">Choose from our collection of professionally designed CV templates to enhance your job application.</p>
+    
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search templates..." [(ngModel)]="searchQuery" (keyup)="applySearch()">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="category-filter">
+          <div class="btn-group" role="group">
+            <button *ngFor="let category of categories" 
+                    class="btn" 
+                    [ngClass]="{'btn-primary': selectedCategory === category, 'btn-outline-primary': selectedCategory !== category}"
+                    (click)="filterByCategory(category)">
+              {{ category }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Templates Display Section -->
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let template of filteredTemplates">
+        <div class="card template-card">
+          <div class="card-img-top template-preview" [style.background]="template.color">
+            <i class="fas fa-file-word fa-3x text-white"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ template.name }}</h5>
+            <p class="card-text">{{ template.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge badge-{{ template.category.toLowerCase() }}">{{ template.category }}</span>
+              <button class="btn btn-primary" (click)="downloadTemplate(template.fileName)">
+                <i class="fas fa-download me-2"></i> Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- No Results Message -->
+    <div class="row" *ngIf="filteredTemplates.length === 0">
+      <div class="col text-center py-5">
+        <i class="fas fa-search fa-3x mb-3 text-muted"></i>
+        <h4>No templates found</h4>
+        <p>Try adjusting your search or filter criteria</p>
+        <button class="btn btn-outline-primary mt-2" (click)="filterByCategory('All')">View All Templates</button>
+      </div>
+    </div>
+  </div>
+</div>

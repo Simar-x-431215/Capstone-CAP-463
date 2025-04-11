@@ -1,0 +1,235 @@
+.template-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.template-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(26, 77, 140, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.template-preview {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.template-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255,0.1)"/><rect x="0" y="0" width="50" height="50" fill="rgba(255,255,255,0.05)"/><rect x="50" y="50" width="50" height="50" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+.template-preview::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+}
+
+.template-preview i {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.gradient-text {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--primary-color);
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  font-size: 1.15rem;
+}
+
+.card-text {
+  color: var(--text-dark);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  height: 50px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.content-wrapper {
+  animation: fadeIn 0.5s ease-out;
+  padding: 2rem 0;
+  background-color: #f8fbfd;
+  min-height: calc(100vh - 56px);
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 140px;
+  overflow: hidden;
+}
+
+/* Badge colors for different categories */
+.badge.badge-business {
+  background-color: var(--primary-color);
+}
+
+.badge.badge-creative {
+  background-color: var(--accent-color);
+}
+
+.badge.badge-legal, .badge.badge-teaching, .badge.badge-other {
+  background-color: var(--secondary-color);
+}
+
+.badge.badge-sales, .badge.badge-academic {
+  background-color: var(--accent-color);
+}
+
+.badge.badge-medical {
+  background-color: var(--primary-color);
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.category-filter .btn-group {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-filter .btn {
+  margin: 0.25rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.category-filter .btn-primary {
+  box-shadow: 0 4px 6px rgba(26, 77, 140, 0.15);
+}
+
+.category-filter .btn-outline-primary {
+  border: 1px solid rgba(26, 77, 140, 0.3);
+  color: var(--primary-color);
+}
+
+.category-filter .btn-outline-primary:hover {
+  background-color: rgba(26, 77, 140, 0.05);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.input-group {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 4px 6px rgba(26, 77, 140, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.input-group-text {
+  background-color: white;
+  border: none;
+  padding-left: 1.25rem;
+  color: var(--primary-color);
+}
+
+.form-control {
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 2rem;
+  }
+  
+  .template-preview {
+    height: 150px;
+  }
+  
+  .category-filter {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+  
+  .badge {
+    padding: 0.25rem 0.75rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
