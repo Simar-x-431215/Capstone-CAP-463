@@ -1,19 +1,134 @@
-<h4 class="mb-4">Find Your Next Opportunity</h4>
-          <div class="search-filters">
-            <div class="search-box">
-              <i class="fas fa-search search-icon"></i>
-              <input type="text" class="search-input" placeholder="Search for skills or job roles...">
+<div class="jobs-container">
+  <!-- Header Section -->
+  <div class="jobs-header">
+    <h1>Find Your Next Opportunity</h1>
+    <p class="lead">Discover jobs that match your skills and preferences</p>
+  </div>
+
+  <!-- Search Filters Section -->
+  <div class="search-section">
+    <div class="container">
+      <div class="search-filters">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Search for skills or job roles...">
+        </div>
+        <div class="location-box">
+          <i class="fas fa-map-marker-alt location-icon"></i>
+          <input type="text" class="location-input" placeholder="Location">
+        </div>
+        <div class="remote-checkbox">
+          <input type="checkbox" id="remote" class="remote-input">
+          <label for="remote" class="remote-label">
+            <i class="fas fa-laptop-house me-2"></i>
+            Remote Jobs Only
+          </label>
+        </div>
+        <button class="search-button">Search Jobs</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Listings Section -->
+  <div class="job-listings">
+    <div class="container">
+      <div class="row">
+        <!-- Filters Sidebar -->
+        <div class="col-md-3">
+          <div class="filters-sidebar">
+            <h4>Filters</h4>
+            
+            <!-- Experience Level -->
+            <div class="filter-group">
+              <h5>Experience Level</h5>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox"> Entry Level
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> Mid Level
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> Senior Level
+                </label>
+              </div>
             </div>
-            <div class="location-box">
-              <i class="fas fa-map-marker-alt location-icon"></i>
-              <input type="text" class="location-input" placeholder="Location">
+
+            <!-- Job Type -->
+            <div class="filter-group">
+              <h5>Job Type</h5>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox"> Full-time
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> Part-time
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> Contract
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> Internship
+                </label>
+              </div>
             </div>
-            <div class="remote-checkbox">
-              <input type="checkbox" id="remote" class="remote-input">
-              <label for="remote" class="remote-label">
-                <i class="fas fa-laptop-house me-2"></i>
-                Remote Jobs Only
-              </label>
+
+            <!-- Salary Range -->
+            <div class="filter-group">
+              <h5>Salary Range</h5>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox"> $0 - $50k
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> $50k - $100k
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox"> $100k+
+                </label>
+              </div>
             </div>
-            <button class="search-button">Search Jobs</button>
           </div>
+        </div>
+
+        <!-- Job Cards -->
+        <div class="col-md-9">
+          <div class="job-cards">
+            <!-- Sample Job Card -->
+            <div class="job-card">
+              <div class="job-header">
+                <div class="company-logo">
+                  <img src="assets/images/company-logo.png" alt="Company Logo">
+                </div>
+                <div class="job-info">
+                  <h3>Senior Software Engineer</h3>
+                  <p class="company-name">TechCorp Inc.</p>
+                  <div class="job-meta">
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+                    <span class="type"><i class="fas fa-briefcase"></i> Full-time</span>
+                    <span class="salary"><i class="fas fa-dollar-sign"></i> $120k - $150k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="job-description">
+                <p>We're looking for a Senior Software Engineer to join our team and help build the next generation of our platform...</p>
+              </div>
+              <div class="job-skills">
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">React</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">AWS</span>
+              </div>
+              <div class="job-footer">
+                <button class="apply-button">Apply Now</button>
+                <button class="save-button"><i class="far fa-bookmark"></i></button>
+              </div>
+            </div>
+
+            <!-- More job cards can be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
